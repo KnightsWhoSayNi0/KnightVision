@@ -10,6 +10,7 @@ version '1.0-SNAPSHOT'
 
 repositories {
     mavenCentral()
+    maven { url 'https://jitpack.io' }
 }
 
 ext {
@@ -25,7 +26,7 @@ tasks.withType(JavaCompile) {
 
 application {
     mainModule = 'me.knightswhosayni.knightvision'
-    mainClass = 'me.knightswhosayni.knightvision.HelloApplication'
+    mainClass = 'me.knightswhosayni.knightvision.MainApplication'
 }
 
 javafx {
@@ -38,6 +39,8 @@ dependencies {
 
     testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
+
+    implementation('com.github.cansik:artnet4j:0.5.1')
 }
 
 test {

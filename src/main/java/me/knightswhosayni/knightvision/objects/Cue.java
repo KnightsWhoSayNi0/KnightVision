@@ -1,2 +1,4 @@
-package me.knightswhosayni.knightvision.objects;public class Cue {
+package me.knightswhosayni.knightvision.objects;
+
+public class Cue {
 }
