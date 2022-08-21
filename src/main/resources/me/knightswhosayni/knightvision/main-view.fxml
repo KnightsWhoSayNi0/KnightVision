@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.ColorPicker?>
 <?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Slider?>
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.TreeTableColumn?>
@@ -28,12 +30,15 @@
          </children></AnchorPane>
     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
          <children>
-            <TreeTableView fx:id="propertiesTree" layoutX="40.0" layoutY="112.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <TreeTableView fx:id="propertiesTree" layoutX="40.0" layoutY="112.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
               <columns>
                 <TreeTableColumn prefWidth="75.0" text="C1" />
                 <TreeTableColumn prefWidth="75.0" text="C2" />
               </columns>
             </TreeTableView>
+            <ColorPicker fx:id="colorPicker" layoutX="76.0" layoutY="280.0" onAction="#colorChosen" AnchorPane.bottomAnchor="100.0" />
+            <Slider fx:id="slider" blockIncrement="0.1" layoutX="32.0" layoutY="216.0" majorTickUnit="0.25" max="1.0" onMouseDragged="#sliderDrag" orientation="VERTICAL" showTickLabels="true" />
+            <Slider fx:id="slider1" blockIncrement="0.1" layoutX="227.0" layoutY="216.0" majorTickUnit="0.25" max="1.0" onMouseDragged="#slider1Drag" orientation="VERTICAL" showTickLabels="true" />
          </children></AnchorPane>
   </items>
 </SplitPane>

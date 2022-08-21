@@ -1,6 +1,6 @@
 package me.knightswhosayni.knightvision.objects.commands;
 
-import me.knightswhosayni.knightvision.objects.commands.impl.IntensityCommand;
+import me.knightswhosayni.knightvision.objects.commands.impl.DimmerCommand;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -11,7 +11,7 @@ public class CommandManager {
 
 	public CommandManager() {
 		commandList = new ArrayList<>();
-		commandList.add(new IntensityCommand());
+		commandList.add(new DimmerCommand());
 	}
 
 	public List<Command> getCommandList() {

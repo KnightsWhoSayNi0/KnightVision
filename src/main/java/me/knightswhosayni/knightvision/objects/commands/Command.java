@@ -1,7 +1,6 @@
 package me.knightswhosayni.knightvision.objects.commands;
 
 import javafx.scene.input.KeyCode;
-import me.knightswhosayni.knightvision.objects.Fixture;
 
 public abstract class Command {
 
@@ -15,7 +14,7 @@ public abstract class Command {
 		this.keyCode = keyCode;
 	}
 
-	public abstract void onCommand(String[] args, Fixture fixture);
+	public abstract void onCommand(String[] args);
 
 	public String getName() {
 		return name;

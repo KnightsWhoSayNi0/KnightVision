@@ -2,6 +2,8 @@ package me.knightswhosayni.knightvision.artnet;
 
 import ch.bildspur.artnet.ArtNetClient;
 
+import java.util.Arrays;
+
 public class ArtnetUtil {
 
 	public byte[] dmxData;
@@ -15,13 +17,12 @@ public class ArtnetUtil {
 
 	public void broadcast(int uni) {
 		artnet.broadcastDmx(0, uni, dmxData);
+		System.out.println("artnet broadcasted; data: " + Arrays.toString(dmxData));
 	}
 
 	public void broadcast(int uni, byte[] tempData) {
-		if (tempData.length==512)
-			artnet.broadcastDmx(0, uni, tempData);
-		else
-			artnet.broadcastDmx(0, uni, dmxData);
+		artnet.broadcastDmx(0, uni, tempData);
+		System.out.println("artnet broadcasted; data: " + Arrays.toString(tempData));
 	}
 
 	// TODO implement unicast (necessary?)
