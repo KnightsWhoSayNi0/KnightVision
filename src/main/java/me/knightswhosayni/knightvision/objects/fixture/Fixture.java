@@ -2,6 +2,8 @@ package me.knightswhosayni.knightvision.objects.fixture;
 
 import me.knightswhosayni.knightvision.artnet.ArtnetUtil;
 
+import java.util.HashMap;
+
 public abstract class Fixture {  // TODO implement .gdtf compliance
 
 	public int channel;
@@ -10,6 +12,7 @@ public abstract class Fixture {  // TODO implement .gdtf compliance
 	public int universe;
 	public int dmxAddr;
 	public ArtnetUtil artnet;
+	public HashMap<DMXType, Integer> dmxTypeHashMap;
 
 	public Fixture(ArtnetUtil artnet, int channelSize, int universe, int dmxAddr) {
 		this.artnet = artnet;
@@ -17,6 +20,7 @@ public abstract class Fixture {  // TODO implement .gdtf compliance
 		this.universe = universe;
 		this.dmxAddr = dmxAddr;
 		dmxData = new byte[channelSize];
+		dmxTypeHashMap = new HashMap<>();
 	}
 
 	public void updateDMX() {
