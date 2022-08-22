@@ -14,7 +14,8 @@ public abstract class Command {
 		this.keyCode = keyCode;
 	}
 
-	public abstract void onCommand(String[] args);
+	public abstract void onCommand(Object[] arg);
+
 
 	public String getName() {
 		return name;
