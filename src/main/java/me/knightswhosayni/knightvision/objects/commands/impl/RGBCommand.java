@@ -8,7 +8,7 @@ public class RGBCommand extends Command {
 	private FixtureManager fm;
 
 	public RGBCommand(FixtureManager fixtureManager) {
-		super("RGB", "Set the RGB color of a fixture.", null); // TODO add separate red, green, and blue command
+		super("rgb", "Set the RGB color of a fixture.", null); // TODO add separate red, green, and blue command
 		this.fm = fixtureManager;
 	}
 

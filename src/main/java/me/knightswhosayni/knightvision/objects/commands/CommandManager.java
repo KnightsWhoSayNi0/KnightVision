@@ -1,6 +1,7 @@
 package me.knightswhosayni.knightvision.objects.commands;
 
 import me.knightswhosayni.knightvision.objects.commands.impl.DimmerCommand;
+import me.knightswhosayni.knightvision.objects.commands.impl.OutCommand;
 import me.knightswhosayni.knightvision.objects.commands.impl.RGBCommand;
 import me.knightswhosayni.knightvision.objects.commands.impl.StrobeCommand;
 import me.knightswhosayni.knightvision.objects.fixture.FixtureManager;
@@ -20,6 +21,7 @@ public class CommandManager {
 		commandList.add(new DimmerCommand(fm));
 		commandList.add(new RGBCommand(fm));
 		commandList.add(new StrobeCommand(fm));
+		commandList.add(new OutCommand(fm));
 	}
 
 	public List<Command> getCommandList() {
