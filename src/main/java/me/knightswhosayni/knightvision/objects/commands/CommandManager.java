@@ -1,6 +1,7 @@
 package me.knightswhosayni.knightvision.objects.commands;
 
 import me.knightswhosayni.knightvision.objects.commands.impl.DimmerCommand;
+import me.knightswhosayni.knightvision.objects.commands.impl.RGBCommand;
 import me.knightswhosayni.knightvision.objects.fixture.FixtureManager;
 
 import java.util.ArrayList;
@@ -16,6 +17,7 @@ public class CommandManager {
 		this.fm = fixtureManager;
 		commandList = new ArrayList<>();
 		commandList.add(new DimmerCommand(fm));
+		commandList.add(new RGBCommand(fm));
 	}
 
 	public List<Command> getCommandList() {

@@ -26,7 +26,6 @@ public class DimmerCommand extends Command {
 				if (((String) args[1]).length() == 1) v = (Double.parseDouble(args[1] + "0")) / 100;
 				else if (((String) args[1]).length() == 2) v = (Double.parseDouble((String) args[1])) / 100;
 			}
-			System.out.println(v);
 			fm.getFixture(Integer.parseInt(String.valueOf(args[0]))).setDimmer(v);
 			fm.getFixture(Integer.parseInt(String.valueOf(args[0]))).updateDMX();
 		}
