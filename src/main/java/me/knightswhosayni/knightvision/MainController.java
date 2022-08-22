@@ -26,7 +26,6 @@ public class MainController {
 		if (keyEvent.getCode().equals(KeyCode.ENTER)) {
 			System.out.println("trying command: " + commandField.getText());
 			if (cm.parseCommand(commandField.getText().split(" "))) { // call to parse command
-				System.out.println("done");
 				commandHistory.getItems().add(0, commandField.getText());
 			} else {
 				commandHistory.getItems().add(0, "\uD835\uDE0C\uD835\uDE19\uD835\uDE19\uD835\uDE16\uD835\uDE19"); // italicized "ERROR"
@@ -49,10 +48,4 @@ public class MainController {
 		fm.getFixture(0).setStrobe(slider1.getValue());
 		fm.getFixture(0).updateDMX();
 	}
-
-	/* old util method, might need regex later
-	private boolean isNumeric(String str) {
-		return str != null && str.matches("[-+]?\\d*\\.?\\d+");
-	}
-	*/
 }

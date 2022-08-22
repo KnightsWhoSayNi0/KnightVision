@@ -15,12 +15,25 @@ public class DimmerCommand extends Command {
 
 	@Override
 	public void onCommand(Object[] args) {
-		System.out.println("onCommand");
 		if (args[0] instanceof String && args.length == 2 && args[1] instanceof String) {
-			fm.getFixture(Integer.parseInt(String.valueOf(args[0]))).setDimmer(Double.parseDouble((String) args[1]));
+			double v = 0;
+
+			if (!isNumeric(((String) args[1]))) {
+				if (((String) args[1]).equalsIgnoreCase("fl")) v = 1;
+				else if (((String) args[1]).equalsIgnoreCase("out")) v = 0;
+				else return;
+			} else {
+				if (((String) args[1]).length() == 1) v = (Double.parseDouble(args[1] + "0")) / 100;
+				else if (((String) args[1]).length() == 2) v = (Double.parseDouble((String) args[1])) / 100;
+			}
+			System.out.println(v);
+			fm.getFixture(Integer.parseInt(String.valueOf(args[0]))).setDimmer(v);
 			fm.getFixture(Integer.parseInt(String.valueOf(args[0]))).updateDMX();
-			System.out.println("did the thing");
 		}
+	}
+
+	private boolean isNumeric(String str) {
+		return str != null && str.matches("[-+]?\\d*\\.?\\d+");
 	}
 
 }
