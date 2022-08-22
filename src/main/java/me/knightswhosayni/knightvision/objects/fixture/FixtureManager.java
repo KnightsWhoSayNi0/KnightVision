@@ -16,7 +16,8 @@ public class FixtureManager {
 		this.artnet = artnet;
 
 		fixtureList = new ArrayList<>();
-		fixtureList.add(new TestFixture(artnet, 0, 0)); // TODO create patch command
+		fixtureList.add(new TestFixture(artnet, 0, 0)); // TODO create patch command'
+		fixtureList.add(new TestFixture(artnet, 0, 7));
 	}
 
 	public Fixture getFixture(int i) {
