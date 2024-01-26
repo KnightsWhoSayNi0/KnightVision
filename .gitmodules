@@ -1,0 +1,3 @@
+[submodule "src/include/libartnet"]
+	path = src/include/libartnet
+	url = https://github.com/OpenLightingProject/libartnet.git
